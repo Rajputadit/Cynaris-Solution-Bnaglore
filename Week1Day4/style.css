@@ -1,0 +1,169 @@
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background-color: #f1f5f9;
+}
+
+/* Mobile-first Navigation */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 5%;
+    background-color: #172554;
+    color: white;
+}
+
+.logo {
+    font-size: 1.6rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+    color: #facc15;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3rem 5%;
+    background: linear-gradient(135deg, #2563eb, #172554);
+    color: white;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1rem;
+    max-width: 40rem;
+    margin: 0 auto 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #facc15;
+    color: #172554;
+    text-decoration: none;
+    border-radius: 0.4rem;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-0.2rem);
+}
+
+/* Services Section */
+.services {
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+/* Mobile: One column */
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    color: #2563eb;
+    margin-bottom: 0.75rem;
+}
+
+/* About Section */
+.about {
+    padding: 2.5rem 5%;
+    text-align: center;
+    background-color: #e2e8f0;
+}
+
+/* Footer */
+footer {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #172554;
+    color: white;
+}
+
+/* Tablet breakpoint: 768px */
+@media (min-width: 48rem) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        padding: 5rem 8%;
+    }
+}
+
+/* Desktop breakpoint: 1200px */
+@media (min-width: 75rem) {
+    .navbar {
+        padding: 1.25rem 8%;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .services {
+        padding: 4rem 8%;
+    }
+
+    .hero h2 {
+        font-size: 3rem;
+    }
+}
